@@ -1,5 +1,3 @@
-import { TThree } from "components/vertical-menu/vertical-menu.types";
-
 export const MENUS: { id: number; label: string; link: string }[] = [
   {
     id: 1,
@@ -72,46 +70,3 @@ export const MENUS: { id: number; label: string; link: string }[] = [
     link: "https://google.com",
   },
 ];
-
-export const THREE: TThree[] = [
-  {
-    id: 1,
-    label: 'Solicitações',
-    childrens: [
-      {
-        id: 10,
-        label: 'Solicitação 1',
-      },
-      {
-        id: 11,
-        label: 'Solicitação 2',
-      }
-    ]
-  },
-  {
-    id: 2,
-    label: 'Fisk web',
-    childrens: []
-  },
-  {
-    id: 3,
-    label: 'Marketing',
-    childrens: [
-      {
-        id: 20,
-        label: 'Campanha 2022',
-        childrens: [
-          {
-            id: 23,
-            label: 'Canpanha 2022 1',
-            childrens: []
-          }
-        ]
-      },
-      {
-        id: 21,
-        label: 'Borrado Infantil'
-      }
-    ]
-  }
-]

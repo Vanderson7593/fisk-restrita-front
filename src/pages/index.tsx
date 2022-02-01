@@ -1,7 +1,6 @@
 import { IMenu } from "@types";
 import Data from "components/data";
 import VericalMenu from "components/vertical-menu";
-import { THREE } from "mocks/menus";
 import { Flex, View } from "modules/elements";
 import type {
   GetServerSideProps,

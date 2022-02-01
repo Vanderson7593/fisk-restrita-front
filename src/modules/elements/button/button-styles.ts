@@ -5,7 +5,7 @@ const black = {
 }
 
 const pink = {
-  backgroundColor: theme.colors.PINK
+  backgroundColor: theme.colors.RED
 }
 
 const bordered = {
