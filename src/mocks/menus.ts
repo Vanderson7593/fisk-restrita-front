@@ -1,7 +1,7 @@
 export const MENUS: { id: number; label: string; link: string }[] = [
   {
     id: 1,
-    label: "Incrições Siele",
+    label: "Incrições Si",
     link: "https://google.com",
   },
   {

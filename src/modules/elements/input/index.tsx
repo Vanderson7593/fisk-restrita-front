@@ -16,10 +16,11 @@ import { InputProps } from "./input.types";
 const Input = styled("input")<InputProps>(
   {
     border: "none",
-    fontSize: "13pt",
-    fontWeight: "lighter",
+    fontSize: "0.8rem",
+    fontWeight: "300",
     backgroundColor: "inherit",
     width: "100%",
+    color: "#4F4F4F",
   },
   compose(
     color,
@@ -29,9 +30,7 @@ const Input = styled("input")<InputProps>(
     position,
     variant({
       prop: "border",
-      variants: {
-        bottom: InputStyles.bottom,
-      },
+      variants: { bottom: InputStyles.bottom },
     })
   )
 );

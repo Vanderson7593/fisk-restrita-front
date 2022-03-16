@@ -1,3 +1,4 @@
+/* eslint-disable object-curly-newline */
 import { IMenu } from "@types";
 import Data from "components/data";
 import VericalMenu from "components/vertical-menu";
@@ -17,10 +18,10 @@ type HomeProps = {
 const Home: NextPage<HomeProps> = ({ menus }) => {
   return (
     <>
-      <Header menus={menus.filter((item) => item.level === 1)} />
+      {/* <Header menus={menus.filter((item) => item.level === 1)} />
+      <VericalMenu menus={menus.filter((item) => item.level === 2)} /> */}
       <Flex mt="32px" justifyContent="space-between">
-        <VericalMenu menus={menus.filter((item) => item.level === 2)} />
-        <Data />
+        {/* <Data /> */}
         <Flex />
       </Flex>
     </>
@@ -41,9 +42,5 @@ export const getServerSideProps: GetServerSideProps = async (
     }
   };
 
-  return {
-    props: {
-      menus: await fetchMenus(),
-    },
-  };
+  return { props: { menus: await fetchMenus() } };
 };

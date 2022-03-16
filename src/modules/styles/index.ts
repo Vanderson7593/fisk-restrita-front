@@ -1,4 +1,4 @@
-import { css } from '@emotion/react'
+import { css } from "@emotion/react";
 
 // eslint-disable-next-line import/prefer-default-export
 export const GlobalStyles = css`
@@ -11,12 +11,12 @@ export const GlobalStyles = css`
   }
 
   html {
-    font-size: 70%;
+    font-size: 16px;
   }
 
   body {
     box-sizing: border-box;
-    margin: 2% 4%;
+    /* margin: 2% 4%; */
   }
 
   a {
@@ -31,31 +31,20 @@ export const GlobalStyles = css`
   }
 
   input[type="date"]::-webkit-calendar-picker-indicator,
-  input[type="time"]::-webkit-calendar-picker-indicator{
+  input[type="time"]::-webkit-calendar-picker-indicator {
     opacity: 1;
     filter: invert(0.8);
   }
 
-  .avatar{
-    border-radius:50%;
-    border: 1px solid #ED3237;
-    width:50px;
-    height:50px;
-
-    img{
-      border-radius:50%;
-    }
-  }
-  
-  ul{
-    list-style:none;
+  ul {
+    list-style: none;
   }
 
   select,
-  input[type=date],
-  input[type=time], {
-    color:#263A41;
-    font-weight:inherit;
+  input[type="date"],
+  input[type="time"] {
+    color: #263a41;
+    font-weight: inherit;
   }
 
   body,
@@ -63,13 +52,13 @@ export const GlobalStyles = css`
   button,
   input,
   textarea {
-    font-family: 'Poppins', 'Open Sans', sans-serif;
+    font-family: "Poppins", "Open Sans", sans-serif;
   }
-  
+
   input:focus,
   textarea:focus,
   button:focus,
   select:focus {
     outline: none;
   }
-`
+`;

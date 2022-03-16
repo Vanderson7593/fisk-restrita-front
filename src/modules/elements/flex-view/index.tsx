@@ -1,3 +1,4 @@
+/* eslint-disable object-curly-newline */
 import styled from "@emotion/styled";
 
 import { ViewProps } from "../elements.types";

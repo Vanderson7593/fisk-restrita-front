@@ -7,7 +7,7 @@ const MenuItem: FC<MenuItemProps> = ({ label, hasChildren }) => {
   return (
     <Item>
       <p>{label}</p>
-      {hasChildren && <ArrowRight />}
+      {/* {hasChildren && <ArrowRight />} */}
     </Item>
   );
 };

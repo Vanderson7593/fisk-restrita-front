@@ -1,8 +1,8 @@
-import { Flex, View } from "modules/elements";
+import { Flex } from "modules/elements";
 import { FC, useCallback, useState } from "react";
 import MenuItem from "./menu-item";
 import { VerticalMenuProps } from "./vertical-menu.types";
-import { Back, Title } from "./vertical-menu.styles";
+import { List } from "./vertical-menu.styles";
 import { Back as BackSVG } from "@svgs";
 import { IMenu } from "@types";
 
@@ -13,10 +13,20 @@ const VericalMenu: FC<VerticalMenuProps> = ({ menus }) => {
 
   const fetchMenu = useCallback(() => {}, []);
 
+  // const onMenuClick = (label: string, childrens: ReadonlyArray<IMenu>) => {
+  //   setTitle(label);
+  //   // setPreviousSection(currentMenus);
+  //   setCurrentMenus(childrens);
+  // };
+
   const onMenuClick = (label: string, childrens: ReadonlyArray<IMenu>) => {
-    setTitle(label);
-    // setPreviousSection(currentMenus);
-    setCurrentMenus(childrens);
+    {
+      menus.map(({ id, title, link }) => (
+        <li key={id}>
+          <a href="#">{title}</a>
+        </li>
+      ));
+    }
   };
 
   const onBackClick = () => {
@@ -27,29 +37,28 @@ const VericalMenu: FC<VerticalMenuProps> = ({ menus }) => {
 
   return (
     <Flex
-      flexDirection="column"
-      boxShadow="true"
-      borderRadius="rounded"
-      width="230px"
-      height="700px"
-      position="relative"
+      flexDirection="row"
+      // width="230px"
+      // height="700px"
+      // position="relative"
     >
-      {previousSection && (
+      {/* {previousSection && (
         <Back onClick={onBackClick}>
           <BackSVG />
           <p>Voltar</p>
         </Back>
-      )}
-      {title && (
+      )} */}
+
+      {/* {title && (
         <Title>
           <p>{title}</p>
         </Title>
-      )}
+      )} */}
       {currentMenus.map(({ id, title, childrens }) => {
         return (
-          <View key={id} onClick={() => onMenuClick(title, childrens as any)}>
+          <List key={id} onClick={() => onMenuClick(title, childrens as any)}>
             <MenuItem label={title} hasChildren={childrens?.length > 0} />
-          </View>
+          </List>
         );
       })}
     </Flex>
