@@ -10,8 +10,9 @@ const SearchBar: FC = () => {
       padding="12px 40px"
       alignItems="center"
       justifyContent="space-between"
-      borderLeft="0.7px solid #bdbdbd"
       borderRight="0.7px solid #bdbdbd"
+      marginLeft="auto"
+      marginRight="auto"
     >
       <View
         width="550px"

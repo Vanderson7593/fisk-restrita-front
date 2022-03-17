@@ -14,7 +14,13 @@ const Data: FC = () => {
         style={{ cursor: "pointer" }}
         onClick={() => setOpen((prevState) => !prevState)}
       >
-        <Flex boxShadow="data" height="48px" borderRadius="7px" flex="1">
+        <Flex
+          boxShadow="data"
+          height="50px"
+          borderRadius="7px"
+          flex="1"
+          className="box"
+        >
           <Flex
             justifyContent="space-between"
             flex="1"
@@ -22,7 +28,7 @@ const Data: FC = () => {
             alignItems="center"
           >
             <p className="description">Apresentação da Campanha 2022</p>
-            {open ? <ArrowTop color="#ED3237" /> : <ArrowDown />}
+            {open ? <ArrowTop /> : <ArrowDown />}
           </Flex>
         </Flex>
       </Flex>

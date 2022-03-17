@@ -51,20 +51,22 @@ const Header: FC<HeaderProps> = ({ menus }) => {
           </li>
         </TopList>
       </Flex>
-      <Flex flex="1" justifyContent="center" alignItems="center">
+      <Flex flex="1" justifyContent="space-between" alignItems="center">
+        {/* <View width="296px" height="75px"> */}
         <View width="296px" height="75px">
           <Logo />
         </View>
-        <View width="568px" height="75px">
+        {/* <View width="568px" height="75px"> */}
+        <View width="41.76vw" height="75px">
           <SearchBar />
         </View>
-        <View width="100px" height="75px">
+        <View width="7.35vw" height="75px">
           <Message />
         </View>
-        <View width="100px" height="75px">
+        <View width="7.35vw" height="75px">
           <Logout />
         </View>
-        <View width="296px" height="75px">
+        <View width="21.76vw" height="75px">
           <Avatar />
         </View>
       </Flex>

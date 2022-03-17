@@ -7,4 +7,5 @@ export const Flex = styled(FlexElement)`
   align-items: center;
   height: 75px;
   padding-right: 148px;
+  border-right: 0.7px solid #bdbdbd;
 `;

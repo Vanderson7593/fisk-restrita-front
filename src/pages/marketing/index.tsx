@@ -21,6 +21,7 @@ import MrFisk from "../../../public/icons/mrFisk.svg";
 import ComunicacaoCoronaVirus from "../../../public/icons/comunicacaoCoronaVirus.svg";
 import Gifs from "../../../public/icons/gifs.svg";
 import Treinamentos from "../../../public/icons/treinamentos.svg";
+import Data from "components/data";
 
 const Marketing: React.FC = () => {
   return (
@@ -29,7 +30,7 @@ const Marketing: React.FC = () => {
         <title>Marketing | Fisk Área Restrita</title>
       </Head>
       <Flex>
-        <Container>
+        <Container id="container-background">
           <div className="menu-vertical">
             <div className="menu-vertical-container">
               <div>
@@ -107,7 +108,7 @@ const Marketing: React.FC = () => {
             </div>
           </div>
           <div className="wrapper">
-            <p>Data</p>
+            <Data />
           </div>
         </Container>
       </Flex>
