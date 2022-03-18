@@ -1,28 +1,64 @@
 /* eslint-disable object-curly-newline */
 import { IMenu } from "@types";
-import Data from "components/data";
 import VericalMenu from "components/vertical-menu";
-import { Flex, View } from "modules/elements";
+import { Flex, Container } from "../modules/styles/Home";
 import type {
   GetServerSideProps,
   GetServerSidePropsContext,
   NextPage,
 } from "next";
+import Head from "next/head";
 import { getMenus } from "services/menu";
-import Header from "../components/header";
+import Image from "next/image";
+import Pdf from "components/svgs/pdf";
+import Carousel from "components/carousel";
 
 type HomeProps = {
   menus: ReadonlyArray<IMenu>;
 };
 
-const Home: NextPage<HomeProps> = ({ menus }) => {
+const Home: NextPage<HomeProps> = () => {
   return (
     <>
-      {/* <Header menus={menus.filter((item) => item.level === 1)} />
-      <VericalMenu menus={menus.filter((item) => item.level === 2)} /> */}
-      <Flex mt="32px" justifyContent="space-between">
-        {/* <Data /> */}
-        <Flex />
+      <Head>
+        <title>Fisk Área Restrita</title>
+      </Head>
+      <Flex>
+        <Container id="container-background">
+          <div>
+            <h1>Notificações</h1>
+          </div>
+
+          <Carousel />
+
+          <div className="container-notice">
+            <div className="box">
+              <h3 className="title-notice">Circular Recente</h3>
+              <div className="img-notice">
+                <Pdf />
+                <p>Lorem ipsum</p>
+              </div>
+              <div className="button-notice">
+                <a href="#">download</a>
+              </div>
+            </div>
+            <div className="box">
+              <h3 className="title-notice">Adicionado Recente</h3>
+              <div className="img-notice">
+                <Image
+                  src="/display.png"
+                  alt="Circular"
+                  width={70}
+                  height={70}
+                />
+                <p>Lorem ipsum</p>
+              </div>
+              <div className="button-notice">
+                <a href="#">download</a>
+              </div>
+            </div>
+          </div>
+        </Container>
       </Flex>
     </>
   );

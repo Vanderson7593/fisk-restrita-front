@@ -11,6 +11,7 @@ export const List = styled("ul")`
     border: 0.5px solid #333333;
     border-radius: 18px;
   } */
+  background: #ed3237;
   li {
     padding: 6px;
     display: flex;

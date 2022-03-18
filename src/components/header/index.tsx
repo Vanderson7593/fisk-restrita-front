@@ -1,62 +1,30 @@
-import { Settings, Bell, Power } from "@svgs";
-import Avatar from "components/avatar";
-import Menu from "components/menu";
-import SearchBar from "components/search-bar";
-import { MENUS } from "mocks/menus";
+import React from "react";
 import { FC } from "react";
 import { Flex, View } from "../../modules/elements";
-import { HeaderProps } from "./header.types";
-import { theme } from "@theme";
+import Avatar from "components/avatar";
+import SearchBar from "components/search-bar";
 import Message from "components/message";
 import Logout from "components/logout";
 import Logo from "components/logo";
-import { TopList, BottomList } from "./header.styles";
+import Menu from "components/menu";
+import MenuInferior from "components/menuInferior";
+import { HeaderProps } from "./header.types";
+import { theme } from "@theme";
 import Link from "next/link";
+import { useMenu } from "hooks/use-menu";
 
-const Header: FC<HeaderProps> = ({ menus }) => {
+const Header: FC<HeaderProps> = () => {
+  const { menus } = useMenu();
+
   return (
     <Flex flexDirection="column">
       <Flex>
-        {/* <Menu menus={menus} /> */}
-        <TopList>
-          <li>
-            <Link href="#">Inscrições Siele</Link>
-          </li>
-          <li>
-            <Link href="#">Inscrições Met</Link>
-          </li>
-          <li>
-            <Link href="#">Eventos</Link>
-          </li>
-          <li>
-            <Link href="#">Cyber Adm</Link>
-          </li>
-          <li>
-            <Link href="#">Testes Classificação</Link>
-          </li>
-          <li>
-            <Link href="#">Webmail</Link>
-          </li>
-          <li>
-            <Link href="#">Pesquisas</Link>
-          </li>
-          <li>
-            <Link href="#">Currículum</Link>
-          </li>
-          <li>
-            <Link href="#">Contato</Link>
-          </li>
-          <li>
-            <Link href="#">Treinamento e Capacitação</Link>
-          </li>
-        </TopList>
+        <Menu menus={menus.filter((item) => item.level === 1)} />
       </Flex>
       <Flex flex="1" justifyContent="space-between" alignItems="center">
-        {/* <View width="296px" height="75px"> */}
         <View width="296px" height="75px">
           <Logo />
         </View>
-        {/* <View width="568px" height="75px"> */}
         <View width="41.76vw" height="75px">
           <SearchBar />
         </View>
@@ -70,44 +38,9 @@ const Header: FC<HeaderProps> = ({ menus }) => {
           <Avatar />
         </View>
       </Flex>
-      <BottomList>
-        <li>
-          <Link href="/">Solicitações</Link>
-        </li>
-        <li>
-          <Link href="/">Fisk web</Link>
-        </li>
-        <li>
-          <Link href="/">Pedagógico</Link>
-        </li>
-        <li>
-          <Link href="/marketing">Marketing</Link>
-        </li>
-        <li>
-          <Link href="/">Manuais</Link>
-        </li>
-        <li>
-          <Link href="/">Jurídico</Link>
-        </li>
-        <li>
-          <Link href="/">Tecnologia</Link>
-        </li>
-        <li>
-          <Link href="/">Franquias</Link>
-        </li>
-        <li>
-          <Link href="/">Controladoria</Link>
-        </li>
-        <li>
-          <Link href="/">Circulares</Link>
-        </li>
-        <li>
-          <Link href="/">Bilingue</Link>
-        </li>
-        <li>
-          <Link href="/">Profissionalizante</Link>
-        </li>
-      </BottomList>
+      <Flex>
+        <MenuInferior menus={menus.filter((item) => item.level === 2)} />
+      </Flex>
     </Flex>
   );
 };

@@ -5,17 +5,20 @@ import { GlobalStyles } from "../modules/styles";
 import { NotificationProvider } from "contexts/notification";
 import Header from "components/header";
 import Footer from "components/footer";
+import { MenuProvider } from "contexts/menu";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Global styles={GlobalStyles} />
       <ThemeProvider theme={theme as Theme}>
-        <NotificationProvider>
-          <Header menus={[]} />
-          <Component {...pageProps} />
-          <Footer />
-        </NotificationProvider>
+        <MenuProvider>
+          <NotificationProvider>
+            <Header menus={[]} />
+            <Component {...pageProps} />
+            <Footer />
+          </NotificationProvider>
+        </MenuProvider>
       </ThemeProvider>
     </>
   );

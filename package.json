@@ -17,6 +17,10 @@
     "next-images": "^1.8.4",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-elastic-carousel": "^0.11.5",
+    "react-icons": "^4.3.1",
+    "react-slick": "^0.28.1",
+    "slick-carousel": "^1.8.1",
     "styled-system": "^5.1.5",
     "uuid": "^8.3.2",
     "yup": "^0.32.11"
@@ -24,6 +28,7 @@
   "devDependencies": {
     "@types/node": "17.0.8",
     "@types/react": "17.0.38",
+    "@types/react-slick": "^0.23.8",
     "@types/styled-system": "^5.1.14",
     "babel-plugin-inline-react-svg": "^2.0.1",
     "eslint": "8.6.0",
