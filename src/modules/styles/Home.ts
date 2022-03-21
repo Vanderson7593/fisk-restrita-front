@@ -19,6 +19,8 @@ export const Container = styled(Flex)`
     font-size: 2rem;
     font-weight: 300;
     color: #ed3237;
+    margin-right: 566px;
+    margin-bottom: -10px;
   }
 
   .container-notice {

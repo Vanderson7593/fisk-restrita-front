@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/link-passhref */
 import React from "react";
 import { FC } from "react";
 import { Flex, View } from "../../modules/elements";
@@ -23,7 +24,9 @@ const Header: FC<HeaderProps> = () => {
       </Flex>
       <Flex flex="1" justifyContent="space-between" alignItems="center">
         <View width="296px" height="75px">
-          <Logo />
+          <Link href="/campanha2022">
+            <Logo />
+          </Link>
         </View>
         <View width="41.76vw" height="75px">
           <SearchBar />

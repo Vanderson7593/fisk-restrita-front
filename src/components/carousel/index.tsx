@@ -8,9 +8,13 @@ import { useTheme } from "@emotion/react";
 import { Theme } from "@theme";
 import { Flex } from "./slider.styles";
 import Slider from "react-slick";
+import Prev from "../../../public/arrow-left.svg";
+import Next from "../../../public/arrow-right.svg";
 
 const Carousel: FC = () => {
   const sliderSettings = {
+    dots: true,
+    arrows: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     infinite: false,

@@ -6,24 +6,32 @@ export const Flex = styled(FlexElement)`
   background: #c4c4c4;
   width: 760px;
   height: 280px;
-  margin: 15px auto 80px auto;
-  padding-top: 40px;
+  /* margin: 10px auto 80px auto; */
+  margin: 0px auto 0px auto;
+  /* padding-top: 40px; */
+  /* overflow: hidden; */
 
   div {
-    margin-top: 36px;
+    margin-top: 46.5px;
+    display: flex;
+    width: 100%;
   }
 
   p {
     font-size: 1rem;
     font-weight: 300;
     color: #4f4f4f;
+    margin-top: -4px;
   }
-  .slick-prev {
-    left: 17px;
-    top: 64px;
+
+  .slick-next:before {
+    color: #c4c4c4;
   }
-  .slick-next {
-    right: 17px;
-    top: 64px;
+  .slick-prev:before {
+    color: #c4c4c4;
+  }
+
+  .slick-slider {
+    margin-top: 20px;
   }
 `;

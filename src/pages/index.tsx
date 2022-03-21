@@ -1,5 +1,5 @@
 /* eslint-disable object-curly-newline */
-import { IMenu } from "@types";
+import { IMenu, INotification } from "@types";
 import VericalMenu from "components/vertical-menu";
 import { Flex, Container } from "../modules/styles/Home";
 import type {
@@ -14,7 +14,7 @@ import Pdf from "components/svgs/pdf";
 import Carousel from "components/carousel";
 
 type HomeProps = {
-  menus: ReadonlyArray<IMenu>;
+  notifications: ReadonlyArray<INotification>;
 };
 
 const Home: NextPage<HomeProps> = () => {
