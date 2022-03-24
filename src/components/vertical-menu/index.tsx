@@ -5,8 +5,9 @@ import { VerticalMenuProps } from "./vertical-menu.types";
 import { List } from "./vertical-menu.styles";
 import { Back as BackSVG } from "@svgs";
 import { IMenu } from "@types";
+import { Title } from "components/data/data.styles";
 
-const VericalMenu: FC<VerticalMenuProps> = ({ menus }) => {
+const VerticalMenu: FC<VerticalMenuProps> = ({ menus }) => {
   const [currentMenus, setCurrentMenus] = useState<ReadonlyArray<IMenu>>(menus);
   const [previousSection, setPreviousSection] = useState<any[]>();
   const [title, setTitle] = useState<string>();
@@ -15,7 +16,7 @@ const VericalMenu: FC<VerticalMenuProps> = ({ menus }) => {
 
   // const onMenuClick = (label: string, childrens: ReadonlyArray<IMenu>) => {
   //   setTitle(label);
-  //   // setPreviousSection(currentMenus);
+  //   setPreviousSection(currentMenus);
   //   setCurrentMenus(childrens);
   // };
 
@@ -37,7 +38,7 @@ const VericalMenu: FC<VerticalMenuProps> = ({ menus }) => {
 
   return (
     <Flex
-      flexDirection="row"
+      flexDirection="column"
       // width="230px"
       // height="700px"
       // position="relative"
@@ -49,11 +50,11 @@ const VericalMenu: FC<VerticalMenuProps> = ({ menus }) => {
         </Back>
       )} */}
 
-      {/* {title && (
+      {title && (
         <Title>
           <p>{title}</p>
         </Title>
-      )} */}
+      )}
       {currentMenus.map(({ id, title, childrens }) => {
         return (
           <List key={id} onClick={() => onMenuClick(title, childrens as any)}>
@@ -65,4 +66,4 @@ const VericalMenu: FC<VerticalMenuProps> = ({ menus }) => {
   );
 };
 
-export default VericalMenu;
+export default VerticalMenu;

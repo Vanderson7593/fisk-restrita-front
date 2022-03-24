@@ -1,9 +1,9 @@
 import { Flex } from "modules/elements";
 import { FC, useState } from "react";
-import { List } from "./menu.styles";
-import { MenuProps } from "./menu.types";
+import { List } from "./menuSuperior.styles";
+import { MenuSuperiorProps } from "./menuSuperior.types";
 
-const Menu: FC<MenuProps> = ({ menus }) => {
+const MenuSuperior: FC<MenuSuperiorProps> = ({ menus }) => {
   const [currentLi, setCurrentLi] = useState<number>();
 
   return (
@@ -23,4 +23,4 @@ const Menu: FC<MenuProps> = ({ menus }) => {
   );
 };
 
-export default Menu;
+export default MenuSuperior;

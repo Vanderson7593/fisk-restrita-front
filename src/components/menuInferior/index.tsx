@@ -1,21 +1,26 @@
+import { IMenu } from "@types";
+import { API_ROUTES } from "constants/api-routes";
 import { Flex } from "modules/elements";
+import Link from "next/link";
 import { FC, useState } from "react";
-import { List } from "./menu.styles";
-import { MenuProps } from "./menu.types";
+import { List } from "./menuInferior.styles";
+import { MenuInferiorProps } from "./menuInferior.types";
 
-const MenuInferior: FC<MenuProps> = ({ menus }) => {
-  const [currentLi, setCurrentLi] = useState<number>();
+const MenuInferior: FC<MenuInferiorProps> = ({ menus }) => {
+  // const [currentLi, setCurrentLi] = useState<number>();
 
   return (
     <Flex flex="1">
       <List>
-        {menus.map(({ id, title, link }) => (
+        {menus.map(({ id, title, link, childrens }) => (
           <li
-            className={currentLi === id ? "selectedMenu" : ""}
+            // className={currentLi === id ? "selectedMenu" : ""}
             key={id}
-            onClick={() => setCurrentLi(id)}
+            // onClick={() => setCurrentLi(id)}
           >
-            <a href="#">{title}</a>
+            <Link href={`${API_ROUTES.MENUS}/${id}`}>
+              <a>{title}</a>
+            </Link>
           </li>
         ))}
       </List>
@@ -24,3 +29,6 @@ const MenuInferior: FC<MenuProps> = ({ menus }) => {
 };
 
 export default MenuInferior;
+function childrens(title: string, childrens: any): void {
+  throw new Error("Function not implemented.");
+}

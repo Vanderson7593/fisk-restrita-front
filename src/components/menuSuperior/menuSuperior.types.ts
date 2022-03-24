@@ -1,5 +1,5 @@
 import { IMenu } from "@types";
 
-export interface MenuProps {
+export interface MenuSuperiorProps {
   menus: ReadonlyArray<IMenu>;
 }

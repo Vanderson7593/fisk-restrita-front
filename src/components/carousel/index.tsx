@@ -8,10 +8,11 @@ import { useTheme } from "@emotion/react";
 import { Theme } from "@theme";
 import { Flex } from "./slider.styles";
 import Slider from "react-slick";
-import Prev from "../../../public/arrow-left.svg";
-import Next from "../../../public/arrow-right.svg";
+import { useNotification } from "hooks/use-notification";
 
 const Carousel: FC = () => {
+  const { notifications } = useNotification();
+
   const sliderSettings = {
     dots: true,
     arrows: true,

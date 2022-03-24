@@ -7,12 +7,12 @@ import SearchBar from "components/search-bar";
 import Message from "components/message";
 import Logout from "components/logout";
 import Logo from "components/logo";
-import Menu from "components/menu";
 import MenuInferior from "components/menuInferior";
 import { HeaderProps } from "./header.types";
 import { theme } from "@theme";
 import Link from "next/link";
 import { useMenu } from "hooks/use-menu";
+import MenuSuperior from "components/menuSuperior";
 
 const Header: FC<HeaderProps> = () => {
   const { menus } = useMenu();
@@ -20,12 +20,14 @@ const Header: FC<HeaderProps> = () => {
   return (
     <Flex flexDirection="column">
       <Flex>
-        <Menu menus={menus.filter((item) => item.level === 1)} />
+        <MenuSuperior menus={menus.filter((item) => item.level === 1)} />
       </Flex>
       <Flex flex="1" justifyContent="space-between" alignItems="center">
         <View width="296px" height="75px">
-          <Link href="/campanha2022">
-            <Logo />
+          <Link href="/">
+            <a>
+              <Logo />
+            </a>
           </Link>
         </View>
         <View width="41.76vw" height="75px">
@@ -42,7 +44,9 @@ const Header: FC<HeaderProps> = () => {
         </View>
       </Flex>
       <Flex>
-        <MenuInferior menus={menus.filter((item) => item.level === 2)} />
+        <MenuInferior
+          menus={menus.filter((item) => !item.parent_id && item.level === 2)}
+        />
       </Flex>
     </Flex>
   );
