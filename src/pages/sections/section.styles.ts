@@ -6,7 +6,8 @@ export const Flex = styled(FlexElement)`
 
   #container-background {
     width: 100vw;
-    background-image: url("./background.jpg");
+    min-height: 80vh;
+    background-image: url("../../background.jpg");
     background-size: cover;
   }
 `;
@@ -22,36 +23,34 @@ export const Container = styled(Flex)`
     width: 296px;
     background: #fff;
 
-    .menu-vertical-container div {
-      display: flex;
-      justify-content: left;
-      align-items: center;
-      padding: 10px 0 10px 20px;
-      width: 286px;
-    }
-    .menu-vertical-container div:hover {
-      background: #f0f0f0;
-      color: #ed3237;
-    }
-
-    .menu-vertical-container div:first-child {
-      margin-top: 40px;
-    }
-
-    .menu-vertical-container svg {
-      width: 23px;
-    }
-
-    .menu-vertical-container a {
+    li {
+      list-style: none;
       font-size: 0.875rem;
       font-weight: 300;
       color: #333;
-      padding: 0 0 0 15px;
-      transition: all 0.2s;
+      padding: 10px 0 10px 20px;
+      display: flex;
+      align-items: center;
+      margin-right: 8px;
     }
-    .menu-vertical-container a:hover {
+
+    li:first-child {
+      margin-top: 40px;
+    }
+    li:hover {
       color: #ed3237;
+      background: #f0f0f0;
     }
+
+    .menuVerticalBtn {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    /* .menuVerticalBtn span {
+      margin-right: 10px;
+    } */
   }
 
   .wrapper {
@@ -59,5 +58,11 @@ export const Container = styled(Flex)`
     display: flex;
     justify-content: center;
     padding-top: 100px;
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 300;
+      color: #ed3237;
+    }
   }
 `;

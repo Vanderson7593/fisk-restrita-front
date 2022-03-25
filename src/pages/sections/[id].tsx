@@ -1,18 +1,22 @@
 import React from "react";
-import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
+import Head from "next/head";
 import { GetServerSideProps, GetServerSidePropsContext, NextPage } from "next";
-
 import Data from "components/data";
+import { SectionPageProps } from "./section.types";
 import { getMenuById } from "services/menu";
-import { MenuSectionPageProps } from "./menuSection.types";
 import { API_ROUTES } from "constants/api-routes";
+import { Flex, Container } from "./section.styles";
 
-import { Flex, Container } from "./menuSection.styles";
+const SectionPage: NextPage<SectionPageProps> = ({ menu }) => {
+  const { parent } = menu;
 
-const MenuSectionPage: NextPage<MenuSectionPageProps> = ({ menu }) => {
-  const { childrens } = menu;
+  const childrens = parent.childrens;
+
+  const { id, title } = menu;
+
+  console.log(parent);
 
   return (
     <>
@@ -34,7 +38,7 @@ const MenuSectionPage: NextPage<MenuSectionPageProps> = ({ menu }) => {
             ))}
           </div>
           <div className="wrapper">
-            <Data />
+            <h1>{title}</h1>
           </div>
         </Container>
       </Flex>
@@ -42,7 +46,7 @@ const MenuSectionPage: NextPage<MenuSectionPageProps> = ({ menu }) => {
   );
 };
 
-export default MenuSectionPage;
+export default SectionPage;
 
 export const getServerSideProps: GetServerSideProps = async (
   ctx: GetServerSidePropsContext
@@ -63,3 +67,6 @@ export const getServerSideProps: GetServerSideProps = async (
 
   return { props: { menu: await fetchMenu() } };
 };
+function useMenus() {
+  throw new Error("Function not implemented.");
+}

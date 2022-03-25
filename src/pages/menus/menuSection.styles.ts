@@ -28,15 +28,29 @@ export const Container = styled(Flex)`
       font-size: 0.875rem;
       font-weight: 300;
       color: #333;
-      padding: 15px 0 0 15px;
+      padding: 10px 0 10px 20px;
+      display: flex;
+      align-items: center;
+      margin-right: 8px;
     }
 
     li:first-child {
-      padding-top: 40px;
+      margin-top: 40px;
     }
     li:hover {
       color: #ed3237;
+      background: #f0f0f0;
     }
+
+    .menuVerticalBtn {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    /* .menuVerticalBtn span {
+      margin-right: 10px;
+    } */
   }
 
   .wrapper {

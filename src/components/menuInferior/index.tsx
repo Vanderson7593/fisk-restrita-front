@@ -7,16 +7,24 @@ import { List } from "./menuInferior.styles";
 import { MenuInferiorProps } from "./menuInferior.types";
 
 const MenuInferior: FC<MenuInferiorProps> = ({ menus }) => {
-  // const [currentLi, setCurrentLi] = useState<number>();
+  const [active, setActive] = useState<boolean>(false);
+
+  // const handleClick = () => {
+  //   if (!active) {
+  //     setActive((prevState) => !prevState);
+  //   } else {
+  //     setActive((prevState) => !prevState);
+  //   }
+  // };
 
   return (
     <Flex flex="1">
       <List>
         {menus.map(({ id, title, link, childrens }) => (
           <li
-            // className={currentLi === id ? "selectedMenu" : ""}
+            className={active === true ? "selectedMenu" : ""}
             key={id}
-            // onClick={() => setCurrentLi(id)}
+            // onClick={() => handleClick()}
           >
             <Link href={`${API_ROUTES.MENUS}/${id}`}>
               <a>{title}</a>

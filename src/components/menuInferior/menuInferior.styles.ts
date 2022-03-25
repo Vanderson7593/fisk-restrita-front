@@ -28,4 +28,7 @@ export const List = styled("ul")`
       }
     }
   }
+  .selectedMenu a {
+    color: #ed3237;
+  }
 `;

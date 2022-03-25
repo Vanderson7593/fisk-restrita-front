@@ -8,6 +8,7 @@ interface IBaseMenu extends IModelBase {
   [EMenu.LINK]: string;
   [EMenu.CHILDRENS]: any;
   [EMenu.PARENT_ID]: number;
+  [EMenu.ICON]: any;
 }
 
 export interface IMenu extends IBaseMenu {

@@ -6,4 +6,5 @@ export enum EMenu {
   LEVEL = "level",
   CHILDRENS = "childrens",
   PARENT_ID = "parent_id",
+  ICON = "icon",
 }
