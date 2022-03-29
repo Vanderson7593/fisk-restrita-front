@@ -1,18 +1,26 @@
 import { ArrowTop, ArrowDown, Play, Download } from "@svgs";
+import { ISection, ITopic } from "@types";
 import { Flex } from "modules/elements";
+import Link from "next/link";
 import { FC, useState } from "react";
 import { Title, Flex as FlexStyled, DataItem } from "./data.styles";
 
-const Data: FC = () => {
+type DataSectionProps = {
+  topic: ITopic;
+};
+
+const Data: FC<DataSectionProps> = ({ topic }) => {
   const [open, setOpen] = useState<boolean>(false);
+
+  const handleClick = () => setOpen((prevState) => !prevState);
 
   return (
     <FlexStyled flexDirection="column">
-      <Title>Campanha 2022</Title>
       <Flex
         width="650px"
         style={{ cursor: "pointer" }}
-        onClick={() => setOpen((prevState) => !prevState)}
+        onClick={() => handleClick()}
+        marginBottom="16px"
       >
         <Flex
           boxShadow="data"
@@ -27,23 +35,27 @@ const Data: FC = () => {
             padding="15px"
             alignItems="center"
           >
-            <p className="description">Apresentação da Campanha 2022</p>
+            <p className="description">{topic.title}</p>
             {open ? <ArrowTop /> : <ArrowDown />}
           </Flex>
         </Flex>
       </Flex>
       {open && (
-        <Flex marginTop="32px" alignSelf="center">
-          <DataItem>
+        <Flex marginTop="6px" marginBottom="45px" alignSelf="center">
+          <DataItem width="90px" height="40px">
             <Play />
           </DataItem>
-          <DataItem>
-            <p>Apresentação Campanha 2022</p>
+          <DataItem width="276px" height="40px">
+            <p>{topic.description}</p>
           </DataItem>
-          <DataItem width="110px"></DataItem>
-          <DataItem>
-            <Download />
-            <p>Download</p>
+          <DataItem width="110px" height="40px"></DataItem>
+          <DataItem width="120px" height="40px">
+            <Link href={topic.file}>
+              <a>
+                <Download />
+                <p>Download</p>
+              </a>
+            </Link>
           </DataItem>
         </Flex>
       )}

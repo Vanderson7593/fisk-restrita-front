@@ -7,4 +7,5 @@ export enum EMenu {
   CHILDRENS = "childrens",
   PARENT_ID = "parent_id",
   ICON = "icon",
+  PAGE = "page",
 }

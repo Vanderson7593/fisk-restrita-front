@@ -34,7 +34,7 @@ export const Container = styled(Flex)`
       margin-right: 8px;
     }
 
-    li:first-child {
+    li:first-of-type {
       margin-top: 40px;
     }
     li:hover {

@@ -33,9 +33,7 @@ const MenuSectionPage: NextPage<MenuSectionPageProps> = ({ menu }) => {
               </li>
             ))}
           </div>
-          <div className="wrapper">
-            <Data />
-          </div>
+          <div className="wrapper">{/* <Data /> */}</div>
         </Container>
       </Flex>
     </>

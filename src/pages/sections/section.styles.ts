@@ -34,7 +34,7 @@ export const Container = styled(Flex)`
       margin-right: 8px;
     }
 
-    li:first-child {
+    li:first-of-type {
       margin-top: 40px;
     }
     li:hover {
@@ -55,14 +55,16 @@ export const Container = styled(Flex)`
 
   .wrapper {
     width: 1064px;
-    display: flex;
-    justify-content: center;
     padding-top: 100px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 
     h1 {
       font-size: 2rem;
       font-weight: 300;
       color: #ed3237;
+      margin-bottom: 24px;
     }
   }
 `;

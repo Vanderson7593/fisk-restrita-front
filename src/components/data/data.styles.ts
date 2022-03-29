@@ -29,16 +29,20 @@ export const DataItem = styled(FlexElement)`
   justify-content: center;
   align-items: center;
   background-color: #e0e0e0;
-  padding: 12px 25px;
-  margin: 0 10px;
-  gap: 10px;
+  margin-right: 7px;
+  gap: 7px;
 
-  p {
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 18px;
-    letter-spacing: 0em;
-    text-align: left;
+  a {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+
+    p {
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 18px;
+      letter-spacing: 0em;
+    }
   }
 `;

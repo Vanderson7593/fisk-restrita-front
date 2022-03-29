@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Head from "next/head";
@@ -8,15 +8,47 @@ import { SectionPageProps } from "./section.types";
 import { getMenuById } from "services/menu";
 import { API_ROUTES } from "constants/api-routes";
 import { Flex, Container } from "./section.styles";
+import { ArrowDown, ArrowTop, Download, Play } from "@svgs";
+import { ITopic } from "@types";
 
 const SectionPage: NextPage<SectionPageProps> = ({ menu }) => {
+  const [open, setOpen] = useState<boolean>(false);
+
   const { parent } = menu;
 
-  const childrens = parent.childrens;
+  const brothers = parent.childrens;
 
   const { id, title } = menu;
 
-  console.log(parent);
+  // console.log(parent);
+
+  // const sections = [
+  //   {
+  //     sectionId: 1,
+  //     title: "Section 1",
+  //     description: "description 1",
+  //   },
+  //   {
+  //     sectionId: 2,
+  //     title: "Section 2",
+  //     description: "description 2",
+  //   },
+  //   {
+  //     sectionId: 3,
+  //     title: "Section 3",
+  //     description: "description 3",
+  //   },
+  // ];
+
+  const page = menu.page;
+
+  const sectionPage = page.sections;
+
+  const topics = sectionPage[0].topics;
+
+  // console.log(page);
+  console.log(sectionPage);
+  console.log(topics);
 
   return (
     <>
@@ -26,7 +58,7 @@ const SectionPage: NextPage<SectionPageProps> = ({ menu }) => {
       <Flex>
         <Container id="container-background">
           <div className="menu-vertical">
-            {childrens.map(({ id, title, link, icon }) => (
+            {brothers.map(({ id, title, link, icon }) => (
               <li key={id}>
                 <Link href={`${API_ROUTES.SECTIONS}/${id}`}>
                   <a className="menuVerticalBtn">
@@ -39,6 +71,11 @@ const SectionPage: NextPage<SectionPageProps> = ({ menu }) => {
           </div>
           <div className="wrapper">
             <h1>{title}</h1>
+            <div>
+              {topics.map((topic: ITopic) => (
+                <Data key={topic.id} topic={topic} />
+              ))}
+            </div>
           </div>
         </Container>
       </Flex>

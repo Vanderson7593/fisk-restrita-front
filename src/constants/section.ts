@@ -1,6 +1,7 @@
 export enum ESection {
-  TITLE = 'title',
-  PAGE = 'page',
-  PARENT = 'parent',
-  ACTIVE = 'active',
+  SECTIONID = "sectionId",
+  TITLE = "title",
+  DESCRIPTION = "description",
+  PARENT = "parent",
+  CHILDRENS = "childrens",
 }
