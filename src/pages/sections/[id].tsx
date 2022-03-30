@@ -46,8 +46,6 @@ const SectionPage: NextPage<SectionPageProps> = ({ menu }) => {
 
   const topics = sectionPage[0].topics;
 
-  // console.log(page);
-  console.log(sectionPage);
   console.log(topics);
 
   return (

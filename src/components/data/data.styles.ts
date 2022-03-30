@@ -7,21 +7,12 @@ export const Flex = styled(FlexElement)`
   }
   .description {
     color: #333333;
-    font-size: 16px;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 300;
     line-height: 24px;
     letter-spacing: 0em;
   }
-`;
-
-export const Title = styled("p")`
-  font-size: 2rem;
-  font-style: normal;
-  font-weight: 300;
-  letter-spacing: 0em;
-  padding-bottom: 15px;
-  color: #ed3237;
 `;
 
 export const DataItem = styled(FlexElement)`
@@ -31,6 +22,13 @@ export const DataItem = styled(FlexElement)`
   background-color: #e0e0e0;
   margin-right: 7px;
   gap: 7px;
+  p {
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 18px;
+    letter-spacing: 0em;
+  }
 
   a {
     display: flex;
@@ -38,7 +36,7 @@ export const DataItem = styled(FlexElement)`
     align-items: center;
 
     p {
-      font-size: 12px;
+      font-size: 0.75rem;
       font-style: normal;
       font-weight: 300;
       line-height: 18px;
