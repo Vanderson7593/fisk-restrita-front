@@ -1,6 +1,7 @@
 import { EPage } from "@constants";
 import { IMenu } from "types/menu";
 import { IModelBase } from "./base";
+import { ISection } from "./section";
 
 export interface IPage extends IModelBase {
   [EPage.TITLE]: string
@@ -10,4 +11,6 @@ export interface IPage extends IModelBase {
   [EPage.FINISH_DATE]: Date
   [EPage.START_DATE]: Date
   [EPage.MENU]: IMenu
+  [EPage.SECTIONS]: ISection[]
+
 }

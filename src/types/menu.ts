@@ -1,5 +1,6 @@
 import { EMenu } from "@constants";
 import { IModelBase } from "./base";
+import { IPage } from "./page";
 
 interface IBaseMenu extends IModelBase {
   [EMenu.TITLE]: string;
@@ -9,7 +10,7 @@ interface IBaseMenu extends IModelBase {
   [EMenu.CHILDRENS]: any;
   [EMenu.PARENT_ID]: number;
   [EMenu.ICON]: any;
-  [EMenu.PAGE]: any;
+  [EMenu.PAGE]: IPage;
 }
 
 export interface IMenu extends IBaseMenu {

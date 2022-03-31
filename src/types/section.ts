@@ -14,8 +14,11 @@ export interface IBaseSection extends IModelBase {
 //   [ESection.CHILDRENS]: ReadonlyArray<IBaseSection>;
 // }
 
-export interface ISection {
+export interface ISection extends IModelBase {
   [ESection.SECTIONID]: number;
   [ESection.TITLE]: string;
   [ESection.DESCRIPTION]: string;
+  [ESection.PARENT]: any;
+  [ESection.PARENT_ID]: number | null;
+  [ESection.CHILDRENS]: any[]
 }

@@ -3,5 +3,6 @@ export enum ESection {
   TITLE = "title",
   DESCRIPTION = "description",
   PARENT = "parent",
+  PARENT_ID = "parent_id",
   CHILDRENS = "childrens",
 }
