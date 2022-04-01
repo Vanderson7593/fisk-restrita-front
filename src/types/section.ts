@@ -10,15 +10,16 @@ export interface IBaseSection extends IModelBase {
 }
 
 // export interface ISection extends IBaseSection {
-//   // [ESection.PARENT]: IBaseSection;
+//   [ESection.PARENT]: IBaseSection;
 //   [ESection.CHILDRENS]: ReadonlyArray<IBaseSection>;
 // }
 
 export interface ISection extends IModelBase {
+  [ESection.TOPICS]: any[];
   [ESection.SECTIONID]: number;
   [ESection.TITLE]: string;
   [ESection.DESCRIPTION]: string;
   [ESection.PARENT]: any;
   [ESection.PARENT_ID]: number | null;
-  [ESection.CHILDRENS]: any[]
+  [ESection.CHILDRENS]: any[];
 }

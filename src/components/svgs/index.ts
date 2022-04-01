@@ -6,3 +6,7 @@ export { default as Logout } from "./logout";
 export { default as Message } from "./message";
 export { default as Play } from "./play";
 export { default as Search } from "./search";
+export { default as Pdf } from "./pdf";
+export { default as Excel } from "./excel";
+export { default as Word } from "./word";
+export { default as Zip } from "./zip";

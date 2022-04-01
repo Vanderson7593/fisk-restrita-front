@@ -9,7 +9,7 @@ import { getMenuById } from "services/menu";
 import { API_ROUTES } from "constants/api-routes";
 import { Flex, Container } from "./section.styles";
 import { ArrowDown, ArrowTop, Download, Play } from "@svgs";
-import { ITopic } from "@types";
+import { ITopic, ISection } from "@types";
 
 const SectionPage: NextPage<SectionPageProps> = ({ menu }) => {
   const [open, setOpen] = useState<boolean>(false);
@@ -20,33 +20,15 @@ const SectionPage: NextPage<SectionPageProps> = ({ menu }) => {
 
   const { id, title } = menu;
 
-  // console.log(parent);
-
-  // const sections = [
-  //   {
-  //     sectionId: 1,
-  //     title: "Section 1",
-  //     description: "description 1",
-  //   },
-  //   {
-  //     sectionId: 2,
-  //     title: "Section 2",
-  //     description: "description 2",
-  //   },
-  //   {
-  //     sectionId: 3,
-  //     title: "Section 3",
-  //     description: "description 3",
-  //   },
-  // ];
+  //  xyz
 
   const page = menu.page;
 
-  const sectionPage = page.sections;
+  const sections = page.sections;
 
-  const topics = sectionPage[0].topics;
+  // const sectionFilter = sections.filter((section) => !section.topics);
 
-  console.log(topics);
+  console.log(sections);
 
   return (
     <>
@@ -70,9 +52,18 @@ const SectionPage: NextPage<SectionPageProps> = ({ menu }) => {
           <div className="wrapper">
             <h1>{title}</h1>
             <div>
-              {topics.map((topic: ITopic) => (
-                <Data key={topic.id} topic={topic} />
-              ))}
+              {/* {sections.map(
+                (section: ISection) =>
+                  section.parent_id && (
+                    <Data key={section.id} section={section} />
+                  )
+              )} */}
+              {sections.map(
+                (section: ISection) =>
+                  section.parent_id && (
+                    <Data key={section.id} section={section} />
+                  )
+              )}
             </div>
           </div>
         </Container>

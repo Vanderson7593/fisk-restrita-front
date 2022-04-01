@@ -2,12 +2,6 @@ import styled from "@emotion/styled";
 import { Flex as FlexElement } from "modules/elements";
 
 export const Flex = styled(FlexElement)`
-  li {
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-    margin-bottom: 7px;
-  }
   .box {
     background: #fff;
   }
@@ -28,7 +22,6 @@ export const DataItem = styled(FlexElement)`
   background-color: #e0e0e0;
   margin-right: 7px;
   gap: 7px;
-
   p {
     font-size: 0.75rem;
     font-style: normal;
