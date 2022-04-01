@@ -1,6 +1,5 @@
 /* eslint-disable object-curly-newline */
 import { IMenu, INotification } from "@types";
-import VericalMenu from "components/vertical-menu";
 import { Flex, Container } from "../modules/styles/Home";
 import type {
   GetServerSideProps,
@@ -15,6 +14,7 @@ import Carousel from "components/carousel";
 
 type HomeProps = {
   notifications: ReadonlyArray<INotification>;
+  s;
 };
 
 const Home: NextPage<HomeProps> = () => {
