@@ -26,7 +26,7 @@ const SectionPage: NextPage<SectionPageProps> = ({ menu }) => {
 
   const sections = page.sections;
 
-  // const sectionFilter = sections.filter((section) => !section.topics);
+  // const sectionFilter = sections.filter((section) => section.parent_id && );
 
   console.log(sections);
 
