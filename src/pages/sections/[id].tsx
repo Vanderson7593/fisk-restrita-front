@@ -4,10 +4,10 @@ import Image from "next/image";
 import Head from "next/head";
 import { GetServerSideProps, GetServerSidePropsContext, NextPage } from "next";
 import Data from "components/data";
-import { SectionPageProps } from "./section.types";
+import { SectionPageProps } from "../../modules/types/section.types";
 import { getMenuById } from "services/menu";
 import { API_ROUTES } from "constants/api-routes";
-import { Flex, Container } from "./section.styles";
+import { Flex, Container } from "../../modules/styles/section.styles";
 import { ArrowDown, ArrowTop, Download, Play } from "@svgs";
 import { ITopic, ISection } from "@types";
 

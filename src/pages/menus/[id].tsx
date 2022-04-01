@@ -6,10 +6,10 @@ import { GetServerSideProps, GetServerSidePropsContext, NextPage } from "next";
 
 import Data from "components/data";
 import { getMenuById } from "services/menu";
-import { MenuSectionPageProps } from "./menuSection.types";
+import { MenuSectionPageProps } from "../../modules/types/menuSection.types";
 import { API_ROUTES } from "constants/api-routes";
 
-import { Flex, Container } from "./menuSection.styles";
+import { Flex, Container } from "../../modules/styles/menuSection.styles";
 
 const MenuSectionPage: NextPage<MenuSectionPageProps> = ({ menu }) => {
   const { childrens } = menu;
