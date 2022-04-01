@@ -7,6 +7,7 @@ import {
   Pdf,
   Word,
   Zip,
+  Img,
 } from "@svgs";
 import { ISection, ITopic } from "@types";
 import { Flex } from "modules/elements";
@@ -79,14 +80,7 @@ const SubSection: FC<SubSectionProps> = ({ sectionChildren }) => {
                 {sectionTopic.file.split(".").pop() == "xlsx" && <Excel />}
                 {sectionTopic.file.split(".").pop() == "doc" && <Word />}
                 {sectionTopic.file.split(".").pop() == "zip" && <Zip />}
-                {sectionTopic.file.split(".").pop() == "png" && (
-                  <Image
-                    src={sectionTopic.file}
-                    width={25}
-                    height={25}
-                    alt={sectionTopic.title}
-                  />
-                )}
+                {sectionTopic.file.split(".").pop() == "png" && <Img />}
                 {sectionTopic.file.split(".").pop() == "jpg" && (
                   <Image
                     src={sectionTopic.file}

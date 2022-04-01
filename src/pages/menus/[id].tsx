@@ -6,7 +6,7 @@ import { GetServerSideProps, GetServerSidePropsContext, NextPage } from "next";
 
 import Data from "components/data";
 import { getMenuById } from "services/menu";
-import { MenuSectionPageProps } from "../../modules/types/menuSection.types";
+import { MenuSectionPageProps } from "../../types/menuSection.types";
 import { API_ROUTES } from "constants/api-routes";
 
 import { Flex, Container } from "../../modules/styles/menuSection.styles";

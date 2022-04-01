@@ -10,3 +10,4 @@ export { default as Pdf } from "./pdf";
 export { default as Excel } from "./excel";
 export { default as Word } from "./word";
 export { default as Zip } from "./zip";
+export { default as Img } from "./img";
