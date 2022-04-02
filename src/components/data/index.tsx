@@ -16,6 +16,7 @@ import Image from "next/image";
 import { FC, useState } from "react";
 import { Flex as FlexStyled, DataItem } from "./data.styles";
 import SubSection from "components/subSection";
+import { API_ROUTES } from "constants/api-routes";
 
 type DataSectionProps = {
   section: ISection;
@@ -73,8 +74,6 @@ const Data: FC<DataSectionProps> = ({ section }) => {
             </li>
           ))}
 
-          {/* Aqui */}
-
           {sectionTopics.map((sectionTopic) => (
             <li key={sectionTopic.id}>
               <DataItem width="90px" height="40px">
@@ -99,7 +98,7 @@ const Data: FC<DataSectionProps> = ({ section }) => {
 
               <DataItem width="110px" height="40px"></DataItem>
               <DataItem width="120px" height="40px">
-                <Link href="">
+                <Link href={`${sectionTopic.file}`}>
                   <a target="_blank" download="">
                     <Download />
                     <p>download</p>
