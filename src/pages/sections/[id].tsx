@@ -14,7 +14,7 @@ const SectionPage: NextPage<SectionPageProps> = ({ menu }) => {
   const [open, setOpen] = useState<boolean>(false);
 
   function getParent() {
-    if (typeof menu.parent !== "undefined") {
+    if (menu.parent !== null) {
       return menu.parent;
     }
   }
