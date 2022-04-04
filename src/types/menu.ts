@@ -11,6 +11,7 @@ interface IBaseMenu extends IModelBase {
   [EMenu.PARENT_ID]: number;
   [EMenu.ICON]: any;
   [EMenu.PAGE]: IPage;
+  [EMenu.PARENT]: any;
 }
 
 export interface IMenu extends IBaseMenu {

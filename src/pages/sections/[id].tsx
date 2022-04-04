@@ -13,7 +13,7 @@ import { SectionPageProps } from "types/section.types";
 const SectionPage: NextPage<SectionPageProps> = ({ menu }) => {
   const [open, setOpen] = useState<boolean>(false);
 
-  const parent = menu?.parent;
+  const { parent } = menu?.parent;
 
   const childrens = parent.childrens;
 
@@ -27,8 +27,8 @@ const SectionPage: NextPage<SectionPageProps> = ({ menu }) => {
 
   const sections = page.sections;
 
-  // console.log(sections);
-  console.log(childrens);
+  console.log(parent);
+  // console.log(childrens);
 
   return (
     <>
