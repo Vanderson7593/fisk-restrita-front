@@ -13,7 +13,7 @@ import { SectionPageProps } from "types/section.types";
 const SectionPage: NextPage<SectionPageProps> = ({ menu }) => {
   const [open, setOpen] = useState<boolean>(false);
 
-  const parent = menu;
+  const parent = menu.parent;
 
   const brothers = parent.childrens;
 
@@ -24,8 +24,6 @@ const SectionPage: NextPage<SectionPageProps> = ({ menu }) => {
   const page = menu.page;
 
   const sections = page.sections;
-
-  // const sectionFilter = sections.filter((section) => section.parent_id && );
 
   console.log(sections);
 
@@ -51,12 +49,6 @@ const SectionPage: NextPage<SectionPageProps> = ({ menu }) => {
           <div className="wrapper">
             <h1>{title}</h1>
             <div>
-              {/* {sections.map(
-                (section: ISection) =>
-                  section.parent_id && (
-                    <Data key={section.id} section={section} />
-                  )
-              )} */}
               {sections.map(
                 (section: ISection) =>
                   !section.parent_id && (
