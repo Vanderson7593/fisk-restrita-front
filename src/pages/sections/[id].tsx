@@ -13,9 +13,9 @@ import { SectionPageProps } from "types/section.types";
 const SectionPage: NextPage<SectionPageProps> = ({ menu }) => {
   const [open, setOpen] = useState<boolean>(false);
 
-  const { parent } = menu?.parent;
+  const parent = menu?.parent;
 
-  const childrens = parent.childrens;
+  const childrens = parent?.childrens;
 
   // const childrens = menu.childrens;
 
@@ -38,7 +38,7 @@ const SectionPage: NextPage<SectionPageProps> = ({ menu }) => {
       <Flex>
         <Container id="container-background">
           <div className="menu-vertical">
-            {childrens.map(({ id, title, link, icon }) => (
+            {childrens?.map(({ id, title, link, icon }) => (
               <li key={id}>
                 <Link href={`${API_ROUTES.SECTIONS}/${id}`}>
                   <a className="menuVerticalBtn">
