@@ -14,7 +14,10 @@ import { Flex } from "modules/elements";
 import Link from "next/link";
 import Image from "next/image";
 import { FC, useState } from "react";
-import { Flex as FlexStyled, DataItem } from "./subSection.styles";
+import {
+  Flex as FlexStyled,
+  DataItem,
+} from "../../modules/styles/subSection.styles";
 import { API_ROUTES } from "constants/api-routes";
 
 type SubSectionProps = {

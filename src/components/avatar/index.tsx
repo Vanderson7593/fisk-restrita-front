@@ -2,7 +2,7 @@ import { FC } from "react";
 import Image from "next/image";
 import { useTheme } from "@emotion/react";
 import { Theme } from "@theme";
-import { Flex } from "./avatar.styles";
+import { Flex } from "../../modules/styles/avatar.styles";
 
 const Avatar: FC = () => {
   const a = "";

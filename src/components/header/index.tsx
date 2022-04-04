@@ -8,7 +8,7 @@ import Message from "components/message";
 import Logout from "components/logout";
 import Logo from "components/logo";
 import MenuInferior from "components/menuInferior";
-import { HeaderProps } from "./header.types";
+import { HeaderProps } from "../../types/header.types";
 import { theme } from "@theme";
 import Link from "next/link";
 import { useMenu } from "hooks/use-menu";

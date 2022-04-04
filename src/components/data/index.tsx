@@ -14,7 +14,7 @@ import { Flex } from "modules/elements";
 import Link from "next/link";
 import Image from "next/image";
 import { FC, useState } from "react";
-import { Flex as FlexStyled, DataItem } from "./data.styles";
+import { Flex as FlexStyled, DataItem } from "../../modules/styles/data.styles";
 import SubSection from "components/subSection";
 import { API_ROUTES } from "constants/api-routes";
 

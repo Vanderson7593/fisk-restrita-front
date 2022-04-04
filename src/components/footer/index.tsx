@@ -1,5 +1,5 @@
 import React from "react";
-import { Flex } from "./footer.styles";
+import { Flex } from "../../modules/styles/footer.styles";
 
 const Footer: React.FC = () => {
   return (

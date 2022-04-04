@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 import { useTheme } from "@emotion/react";
 import { Theme } from "@theme";
-import { Flex } from "./slider.styles";
+import { Flex } from "../../modules/styles/slider.styles";
 import Slider from "react-slick";
 import { useNotification } from "hooks/use-notification";
 

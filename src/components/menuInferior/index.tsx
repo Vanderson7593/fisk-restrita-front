@@ -3,8 +3,8 @@ import { API_ROUTES } from "constants/api-routes";
 import { Flex } from "modules/elements";
 import Link from "next/link";
 import { FC, useState } from "react";
-import { List } from "./menuInferior.styles";
-import { MenuInferiorProps } from "./menuInferior.types";
+import { List } from "../../modules/styles/menuInferior.styles";
+import { MenuInferiorProps } from "../../types/menuInferior.types";
 
 const MenuInferior: FC<MenuInferiorProps> = ({ menus }) => {
   const [active, setActive] = useState<boolean>(false);
