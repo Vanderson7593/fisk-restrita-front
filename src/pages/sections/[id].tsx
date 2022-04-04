@@ -15,9 +15,9 @@ const SectionPage: NextPage<SectionPageProps> = ({ menu }) => {
 
   // const parent = menu.parent || {};
 
-  const { parent } = menu?.parent;
+  const parent = menu?.parent;
 
-  const { childrens } = parent?.childrens;
+  const childrens = parent.childrens;
 
   // const childrens = menu.childrens;
 
@@ -40,7 +40,7 @@ const SectionPage: NextPage<SectionPageProps> = ({ menu }) => {
       <Flex>
         <Container id="container-background">
           <div className="menu-vertical">
-            {childrens?.map(({ id, title, link, icon }) => (
+            {childrens.map(({ id, title, link, icon }) => (
               <li key={id}>
                 <Link href={`${API_ROUTES.SECTIONS}/${id}`}>
                   <a className="menuVerticalBtn">
