@@ -23,7 +23,7 @@ const SectionPage: NextPage<SectionPageProps> = ({ menu }) => {
 
   // const parent = menu?.parent;
 
-  const childrens = parent?.childrens;
+  const { childrens } = parent?.childrens;
 
   const { id, title } = menu;
 
