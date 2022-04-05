@@ -13,7 +13,6 @@ import { useMenu } from "hooks/use-menu";
 
 const SectionPage: NextPage<SectionPageProps> = ({ menu }) => {
   const [open, setOpen] = useState<boolean>(false);
-  const { menus } = useMenu();
 
   // function getParent() {
   //   if (typeof menu.parent === null) {
@@ -30,7 +29,7 @@ const SectionPage: NextPage<SectionPageProps> = ({ menu }) => {
 
   // { usrname = 'empty' } = arg || {}
 
-  const { childrens } = menu.parent;
+  // const { childrens } = menu.parent;
 
   // const childrens = parent?.childrens;
 
@@ -42,9 +41,6 @@ const SectionPage: NextPage<SectionPageProps> = ({ menu }) => {
 
   const sections = page.sections;
 
-  console.log(childrens);
-  // console.log(filterMenus);
-
   return (
     <>
       <Head>
@@ -52,7 +48,7 @@ const SectionPage: NextPage<SectionPageProps> = ({ menu }) => {
       </Head>
       <Flex>
         <Container id="container-background">
-          <div className="menu-vertical">
+          {/* <div className="menu-vertical">
             {childrens.map(({ id, title, link, icon }) => (
               <li key={id}>
                 <Link href={`${API_ROUTES.SECTIONS}/${id}`}>
@@ -63,7 +59,7 @@ const SectionPage: NextPage<SectionPageProps> = ({ menu }) => {
                 </Link>
               </li>
             ))}
-          </div>
+          </div> */}
           <div className="wrapper">
             <h1>{title}</h1>
             <div>
