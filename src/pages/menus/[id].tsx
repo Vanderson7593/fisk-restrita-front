@@ -14,6 +14,8 @@ import { Flex, Container } from "../../modules/styles/menuSection.styles";
 const MenuSectionPage: NextPage<MenuSectionPageProps> = ({ menu }) => {
   const { childrens } = menu;
 
+  console.log(childrens);
+
   return (
     <>
       <Head>

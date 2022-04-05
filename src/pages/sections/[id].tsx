@@ -29,7 +29,7 @@ const SectionPage: NextPage<SectionPageProps> = ({ menu }) => {
 
   // { usrname = 'empty' } = arg || {}
 
-  // const { childrens } = menu.parent;
+  const { childrens } = menu.parent;
 
   // const childrens = parent?.childrens;
 
@@ -37,9 +37,9 @@ const SectionPage: NextPage<SectionPageProps> = ({ menu }) => {
 
   const { id, title } = menu;
 
-  const page = menu.page;
+  const sections = menu.page.sections;
 
-  const sections = page.sections;
+  console.log(menu);
 
   return (
     <>
@@ -48,7 +48,7 @@ const SectionPage: NextPage<SectionPageProps> = ({ menu }) => {
       </Head>
       <Flex>
         <Container id="container-background">
-          {/* <div className="menu-vertical">
+          <div className="menu-vertical">
             {childrens.map(({ id, title, link, icon }) => (
               <li key={id}>
                 <Link href={`${API_ROUTES.SECTIONS}/${id}`}>
@@ -59,7 +59,8 @@ const SectionPage: NextPage<SectionPageProps> = ({ menu }) => {
                 </Link>
               </li>
             ))}
-          </div> */}
+          </div>
+
           <div className="wrapper">
             <h1>{title}</h1>
             <div>
