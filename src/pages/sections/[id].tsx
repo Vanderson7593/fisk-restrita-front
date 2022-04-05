@@ -15,15 +15,19 @@ const SectionPage: NextPage<SectionPageProps> = ({ menu }) => {
   const [open, setOpen] = useState<boolean>(false);
   const { menus } = useMenu();
 
-  // function getParent() {
-  //   if (menu.parent !== null) {
-  //     return menu.parent;
-  //   }
-  // }
+  function getParent() {
+    // const defaultParent = "Invalid User Object";
+    if (menu.parent == null) {
+      return undefined;
+    }
+    if (menu.parent !== null) {
+      return menu.parent;
+    }
+  }
 
-  // const parent = getParent();
+  const parent = getParent();
 
-  const childrens = menu.parent.childrens;
+  const childrens = parent?.childrens;
 
   // const parentId = menu.parent.id;
 
