@@ -15,18 +15,24 @@ const SectionPage: NextPage<SectionPageProps> = ({ menu }) => {
   const [open, setOpen] = useState<boolean>(false);
   const { menus } = useMenu();
 
-  function getParent() {
-    if (typeof menu.parent === null) {
-      return undefined;
-    }
-    if (typeof menu.parent !== null) {
-      return menu.parent;
-    }
-  }
+  // function getParent() {
+  //   if (typeof menu.parent === null) {
+  //     return undefined;
+  //   }
+  //   if (typeof menu.parent !== null) {
+  //     return menu.parent;
+  //   }
+  // }
 
-  const parent = getParent();
+  // const parent = getParent();
 
-  const childrens = parent?.childrens;
+  // const childrens = parent?.childrens;
+
+  // { usrname = 'empty' } = arg || {}
+
+  const { childrens } = menu.parent;
+
+  // const childrens = parent?.childrens;
 
   // break
 
