@@ -4,6 +4,7 @@ import { ITopic } from "@types";
 
 export interface SectionPageProps {
   menu: IMenu;
-  // sections: ReadonlyArray<ISection>;
+  menus: ReadonlyArray<IMenu>;
+  sections: ReadonlyArray<ISection>;
   topics: ReadonlyArray<ITopic>;
 }

@@ -9,9 +9,11 @@ import { API_ROUTES } from "constants/api-routes";
 import { Flex, Container } from "../../modules/styles/section.styles";
 import { ISection } from "@types";
 import { SectionPageProps } from "types/section.types";
+import { useMenu } from "hooks/use-menu";
 
 const SectionPage: NextPage<SectionPageProps> = ({ menu }) => {
   const [open, setOpen] = useState<boolean>(false);
+  const { menus } = useMenu();
 
   // function getParent() {
   //   if (menu.parent !== null) {
@@ -21,7 +23,13 @@ const SectionPage: NextPage<SectionPageProps> = ({ menu }) => {
 
   // const parent = getParent();
 
-  const childrens = menu.parent.childrens;
+  const { childrens } = menu.parent.childrens;
+
+  // const parentId = menu.parent.id;
+
+  // const filterMenus = menus.filter((menu) => menu.id === parentId);
+
+  // const childrens = filterMenus.filter((item) => item.childrens);
 
   // const { childrens } = parent?.childrens;
 
@@ -33,8 +41,8 @@ const SectionPage: NextPage<SectionPageProps> = ({ menu }) => {
 
   const sections = page.sections;
 
-  console.log(parent);
-  // console.log(childrens);
+  console.log(childrens);
+  // console.log(filterMenus);
 
   return (
     <>
