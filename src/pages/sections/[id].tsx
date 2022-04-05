@@ -27,13 +27,13 @@ const SectionPage: NextPage<SectionPageProps> = ({ menu }) => {
 
   // const childrens = parent?.childrens;
 
-  const childrens = menu?.parent.childrens || {};
+  const childrens = menu.parent.childrens || {};
 
   // break
 
   const { id, title } = menu;
 
-  const sections = menu.page.sections;
+  const sections = menu.page.sections || {};
 
   console.log(menu);
 
