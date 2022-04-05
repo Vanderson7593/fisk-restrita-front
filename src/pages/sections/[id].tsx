@@ -16,11 +16,10 @@ const SectionPage: NextPage<SectionPageProps> = ({ menu }) => {
   const { menus } = useMenu();
 
   function getParent() {
-    // const defaultParent = "Invalid User Object";
-    if (menu.parent == null) {
+    if (typeof menu.parent === null) {
       return undefined;
     }
-    if (menu.parent !== null) {
+    if (typeof menu.parent !== null) {
       return menu.parent;
     }
   }
@@ -29,17 +28,9 @@ const SectionPage: NextPage<SectionPageProps> = ({ menu }) => {
 
   const childrens = parent?.childrens;
 
-  // const parentId = menu.parent.id;
-
-  // const filterMenus = menus.filter((menu) => menu.id === parentId);
-
-  // const childrens = filterMenus.filter((item) => item.childrens);
-
-  // const { childrens } = parent?.childrens;
+  // break
 
   const { id, title } = menu;
-
-  //  xyz
 
   const page = menu.page;
 
