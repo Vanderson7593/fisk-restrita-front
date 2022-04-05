@@ -27,11 +27,7 @@ const SectionPage: NextPage<SectionPageProps> = ({ menu }) => {
 
   // const childrens = parent?.childrens;
 
-  // { usrname = 'empty' } = arg || {}
-
-  const { childrens } = menu.parent;
-
-  // const childrens = parent?.childrens;
+  const childrens = menu?.parent.childrens || {};
 
   // break
 
