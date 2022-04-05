@@ -93,7 +93,7 @@ export const getServerSideProps: GetServerSideProps = async (
       return data;
     } catch (error) {
       console.log(error);
-      return null;
+      return undefined;
     }
   };
 
